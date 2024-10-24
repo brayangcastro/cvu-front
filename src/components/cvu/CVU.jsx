@@ -1,35 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope, faMapMarkerAlt, faLaptopCode, faGraduationCap, faBriefcase, faServer, faMicrochip, faCloud, faRobot, faLock } from '@fortawesome/free-solid-svg-icons';
-import './CVU.css';  // Importamos los estilos
-import CVUImage from './CVU_pic.jpg';
-import NeerdImage from './CVU_pic.jpg';
-import LEDTechImage from './CVU_pic.jpg';
-import MetatronicImage from './CVU_pic.jpg';
-import PurpImage from './CVU_pic.jpg';
-import SlidingBar from './SlidingBar';  // Importar la barra superior
-import Experience from './Experience';  // Importar la sección de experiencia
-import Skills from './Skills';  // Importar la sección de experiencia
-
-// Importación de imágenes de tecnologías
-import AWSIcon from './tecnologias/aws.png';
-import JSIcon from './tecnologias/JS.png';
-import LinuxIcon from './tecnologias/linux.png';
-import MySQLIcon from './tecnologias/mysql.png';
-import NodeJSIcon from './tecnologias/nodejs.png';
-import PythonIcon from './tecnologias/python.png';
-import ReactIcon from './tecnologias/react.png';
-import TSIcon from './tecnologias/TS.png';
-
-import Chatbot from './tecnologias/chatbot.png';
-
-import Openai from './tecnologias/openai.png';
-import AmazonLinux from './tecnologias/awslinux.png';
+import { faPhone, faEnvelope, faMapMarkerAlt, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import './CVU.css';
+import CVUImage from './CVU_pic.jpg'; 
+import SlidingBar from './SlidingBar';
+import Experience from './Experience';
+import Skills from './Skills';
+import translations from './translations'; // Importar el archivo de traducciones
 
 const CVU = () => {
+  const [language, setLanguage] = useState('en'); // Estado para el idioma
+
+  const handleLanguageChange = (event) => {
+    setLanguage(event.target.value); // Cambiar el idioma seleccionado
+  };
+
+  const texts = translations[language]; // Obtener los textos según el idioma seleccionado
+
   return (
     <div>
-      <SlidingBar />  {/* Añadir la barra superior */}
+      <SlidingBar language={language}/> {/* Añadir la barra superior */}
+
+      {/* Selector de idioma */}
+      <div className="languageSelector">
+        <label htmlFor="language"></label>
+        <select id="language" value={language} onChange={handleLanguageChange}>
+          <option value="es">Español</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+
       <div className="container">
         {/* Barra lateral */}
         <aside className="sidebar">
@@ -38,10 +38,10 @@ const CVU = () => {
           </div>
           <section className="contactSection">
             <h1 className="name">Brayan Castro</h1>
-            <p className="role">Ingeniero en Mecatrónica</p>
+            <p className="role">{texts.role}</p> {/* Texto dinámico */}
             <div className="contactInfo">
               <FontAwesomeIcon icon={faPhone} className="icon" />
-              <span>(662) 1495980</span>
+              <span>(687) 1731093</span>
             </div>
             <div className="contactInfo">
               <FontAwesomeIcon icon={faEnvelope} className="icon" />
@@ -57,28 +57,22 @@ const CVU = () => {
         {/* Sección principal */}
         <main className="mainContent">
           <section className="section">
-            <h2 className="sectionTitle">Objetivo Profesional</h2>
-            <p className="text">
-              Mi objetivo es participar en el desarrollo de tecnología innovadora que marque la diferencia en la industria. Busco involucrarme en proyectos de vanguardia que utilicen las últimas tecnologías para crear soluciones escalables y disruptivas. Estoy comprometido con generar resultados que no solo sean rentables, sino que también tengan un impacto significativo. Mi enfoque está en aprender continuamente y colaborar con equipos que busquen llevar la tecnología al siguiente nivel, contribuyendo tanto al éxito empresarial como a mi crecimiento personal y profesional.
-            </p>
+            <h2 className="sectionTitle">{texts.objective}</h2>
+            <p className="text">{texts.professionalObjective}</p>
           </section>
 
-          
-
-          <Skills /> 
+          <Skills language={language} />
 
           <section className="section">
             <h2 className="sectionTitle">
               <FontAwesomeIcon icon={faGraduationCap} className="iconTitle" /> 
-              Educación
+              {texts.education}
             </h2>
             <p className="text"><strong>Ingeniería en Mecatrónica</strong> - ITESM-CSN (2008 – 2013)</p>
             <p className="text"><strong>Técnico en Informática</strong> - CETIS 108 (2005 – 2008)</p>
           </section>
 
-          {/* Componente de experiencia profesional */}
-          <Experience /> {/* Aquí importamos el componente de experiencia */}
-
+          <Experience  language={language}/>
         </main>
       </div>
     </div>

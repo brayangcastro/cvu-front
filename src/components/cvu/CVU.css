@@ -1,35 +1,56 @@
+/* Importación de fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
+/* Estilos generales */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #f7f8fc;
-  margin: 0;
   color: #333;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita el scroll horizontal */
 }
 
+/* Barra superior fija (SlidingBar) */
+.slidingBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #1a1a2e;
+  color: #fff;
+  padding: 15px 20px; /* Ajusta según lo necesario */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste del margen superior del contenedor principal */
 .container {
+  margin-top: 80px; /* Aumentado para evitar solapamiento con la barra */
   display: flex;
   flex-direction: row;
   width: 100%;
   min-height: 100vh;
   background-color: #fff;
-  margin-top: 50px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0 20px; /* Padding lateral para un margen visual */
 }
 
+/* Barra lateral (sidebar) */
 .sidebar {
-  width: 30%;
+  flex: 0 0 30%; /* Sidebar ocupa el 30% del ancho */
   background-color: #1a1a2e;
   padding: 30px;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -69,6 +90,7 @@ body {
   color: #e0e0e0;
 }
 
+/* Información de contacto */
 .contactInfo {
   display: flex;
   align-items: center;
@@ -86,12 +108,12 @@ body {
   margin-right: 10px;
 }
 
+/* Sección principal (mainContent) */
 .mainContent {
-  width: 70%;
+  flex: 1; /* Ocupar el resto del espacio disponible */
   padding: 40px;
   box-sizing: border-box;
   background-color: #f7f8fc;
-  transition: all 0.3s ease;
 }
 
 .section {
@@ -99,11 +121,11 @@ body {
 }
 
 .text {
-  font-size: 1.1em; /* Aumenta ligeramente el tamaño de la fuente */
+  font-size: 1.1em;
   line-height: 1.6;
-  color: #444; /* Color más oscuro para mejorar la legibilidad */
-  font-weight: 400; /* Aumenta un poco el grosor */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar */
+  color: #444;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .sectionTitle {
@@ -114,25 +136,31 @@ body {
   display: flex;
   align-items: center;
   color: #1a1a2e;
-  font-weight: 600; /* Aumenta el grosor de la sección del título */
+  font-weight: 600;
 }
-
-
 
 .iconTitle {
   margin-right: 10px;
   color: #ffd700;
 }
 
+/* Lista de habilidades técnicas */
 .skillList {
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Organiza las habilidades en dos columnas */
+  gap: 20px;
 }
 
 .skillList li {
-  margin-bottom: 10px;
   display: flex;
   align-items: center;
+  background-color: #f7f7f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .techIcon {
@@ -146,22 +174,59 @@ body {
   transform: scale(1.1);
 }
 
-.experienceImage {
-  width: 80px;  /* Tamaño pequeño para las fotos */
-  height: 80px;
-  border-radius: 10px;  /* Añade bordes redondeados si quieres */
-  margin-right: 20px;  /* Espacio entre la imagen y el texto */
-  object-fit: cover;  /* Asegura que la imagen cubra bien el área sin distorsionarse */
-}
-/* Efecto de hover para las imágenes y transiciones suaves */
-.photo:hover,
-.techIcon:hover {
-  transform: scale(1.1);
+/* Experiencia */
+.experienceItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f7f7f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.experienceImage {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.experienceImage:hover {
+  transform: scale(1.05);
+}
+
+.jobTitle {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Selector de idioma */
+.languageSelector {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1100;
+}
+
+.languageSelector select {
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  background-color: #ffd700;
+  color: #1a1a2e;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsividad */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
+    margin-top: 100px; /* Ajuste en pantallas pequeñas */
   }
 
   .sidebar, .mainContent {
@@ -176,97 +241,9 @@ body {
   .mainContent {
     padding: 20px;
   }
-}
 
-
-/* Estilos para la lista de habilidades técnicas */
-.skillList {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);  /* Organiza las habilidades en dos columnas */
-  gap: 20px;  /* Añade espacio entre los elementos */
-}
-
-.skillList li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  background-color: #f7f7f9;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.techIcon {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  transition: transform 0.3s ease;
-}
-
-.techIcon:hover {
-  transform: scale(1.1);
-}
-
-.sectionTitle {
-  font-size: 1.8em;
-  border-bottom: 2px solid #ffd700;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  color: #1a1a2e;
-}
-
-.iconTitle {
-  margin-right: 10px;
-  color: #ffd700;
-}
-
-
-
-
-.experienceItem {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  padding: 15px;
-  background-color: #f7f7f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.experienceImage {
-  width: 120px; /* Ajusta el tamaño de las imágenes */
-  height: 120px;
-  margin-right: 20px;
-  border-radius: 10px;
-  object-fit: cover; /* Asegura que la imagen mantenga su proporción */
-  transition: transform 0.3s ease;
-}
-
-.experienceImage:hover {
-  transform: scale(1.05);
-}
-
-.jobTitle {
-  font-size: 1.3em;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.text {
-  font-size: 1em;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* Estilos para pantallas más pequeñas (móviles) */
-@media (max-width: 768px) {
   .experienceItem {
-    flex-direction: column; /* Cambia a disposición vertical en móviles */
+    flex-direction: column;
     align-items: center;
   }
 
