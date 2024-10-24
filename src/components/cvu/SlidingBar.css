@@ -1,0 +1,34 @@
+/* Contenedor de la barra */
+.slidingBarContainer {
+    width: 100%;
+    background-color: #1e1e2f;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000;  /* Asegura que esté siempre visible */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade un pequeño efecto de sombra */
+  }
+  
+  /* Estilo del mensaje deslizante */
+  .slidingBarMessage {
+    display: inline-block;
+    white-space: nowrap;
+    animation: slide 10s linear infinite; /* Animación de desplazamiento continuo */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffd700;  /* Texto en color dorado */
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
