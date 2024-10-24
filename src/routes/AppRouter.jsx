@@ -43,6 +43,7 @@ function AppRouter() {
             <Routes>
             <Route path="/lockscreen" element={<LockScreen />} /> {/* Ruta agregada para LockScreen */}
             <Route path="/cvu" element={ <CVU /> } />
+            <Route path="/" element={ <CVU /> } />
  
                 {isAuthenticated ? (
                     <Route element={<Outlet />}>
@@ -52,7 +53,7 @@ function AppRouter() {
                     </Route>
                 ) : (
                     <Route element={<Outlet />}>
-                        <Route path="/" element={<Login />} />
+                        <Route path="/login" element={<Login />} />
                         <Route path="/registro" element={<Signin />} />
                     </Route>
                 )}
