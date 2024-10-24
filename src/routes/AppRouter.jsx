@@ -8,6 +8,8 @@ import LockScreen from '../components/LockScreen';
 import ClientesManage from '../routes/admin/clientesManage/clientesManage'; // Asegúrate de que este componente esté correctamente importado y estilizado
 import CVU from '../components/cvu/CVU';
 
+import LandingPage from '../components/landing/LandingPage';
+
 
 const baseRouter = import.meta.env.VITE_BASENAME;
 
@@ -44,7 +46,8 @@ function AppRouter() {
             <Route path="/lockscreen" element={<LockScreen />} /> {/* Ruta agregada para LockScreen */}
             <Route path="/cvu" element={ <CVU /> } />
             <Route path="/" element={ <CVU /> } />
- 
+               <Route path="/home" element={ <LandingPage /> } />
+            
                 {isAuthenticated ? (
                     <Route element={<Outlet />}>
                         <Route path="/" element={<Layout><ClientesManage /></Layout>} /> 
