@@ -1,0 +1,51 @@
+/* Estilos de la sección Experience */
+.section {
+  padding: 20px;
+  margin-bottom: 50px; /* Espacio entre secciones */
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Contenedor de cada item de experiencia */
+.experienceItem {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px !important; /* Aumenta el espacio entre experiencias con !important */
+  padding: 15px;
+  background-color: #f7f7f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de la imagen de experiencia */
+.experienceImage {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.experienceImage:hover {
+  transform: scale(1.05);
+}
+
+/* Título del trabajo */
+.jobTitle {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Texto de descripción */
+.text {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}

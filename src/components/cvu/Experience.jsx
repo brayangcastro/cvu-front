@@ -11,7 +11,7 @@ import TacosKissiImage from './tecnologias/kissi.png';
 import BCIngenieriaImage from './tecnologias/bcingenieria.png';
 import PuntoMagicoImage from './tecnologias/magico.png';
 import AqquaGym from './tecnologias/aqqua.png';
-import './CVU.css';
+import './Experience.css';
 
 const Experience = ({ language }) => {
   const texts = translations[language].experience;  // Obtener los textos según el idioma seleccionado

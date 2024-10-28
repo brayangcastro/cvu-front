@@ -9,7 +9,12 @@ import ClientesManage from '../routes/admin/clientesManage/clientesManage'; // A
 import CVU from '../components/cvu/CVU';
 
 import LandingPage from '../components/landing/LandingPage';
-
+import Survey from '../components/survey/survey';
+import PhoneVerification from '../components/survey/PhoneVerification';
+import UserRegistration from '../components/survey/UserRegistration';
+ 
+import BoletosManage from '../routes/admin/boletosManage/rifas/BoletoApp';
+import ConfirmacionBoletos from '../routes/admin/boletosManage/rifas/ConfirmacionBoletos';
 
 const baseRouter = import.meta.env.VITE_BASENAME;
 
@@ -46,7 +51,16 @@ function AppRouter() {
             <Route path="/lockscreen" element={<LockScreen />} /> {/* Ruta agregada para LockScreen */}
             <Route path="/cvu" element={ <CVU /> } />
             <Route path="/" element={ <CVU /> } />
-               <Route path="/home" element={ <LandingPage /> } />
+            <Route path="/home" element={ <LandingPage /> } />
+            <Route path="/encuesta" element={ <Survey /> } />
+            <Route path="/veri" element={ <PhoneVerification /> } />
+            <Route path="/registro" element={ <UserRegistration /> } />
+            <Route path="/boletos" element={ <BoletosManage /> } />
+            <Route path="/confirma" element={ <ConfirmacionBoletos /> } />
+
+            
+            
+            
             
                 {isAuthenticated ? (
                     <Route element={<Outlet />}>

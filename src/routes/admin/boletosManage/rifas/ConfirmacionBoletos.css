@@ -1,0 +1,98 @@
+/* Estilo para la página de confirmación de boletos */
+
+.confirmacion-boletos-contenedor {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h2 {
+    color: #007bff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .upload-ticket {
+    margin-bottom: 20px;
+  }
+  
+  .upload-label {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .upload-label:hover {
+    background-color: #0056b3;
+  }
+  
+  .ticket-info {
+    margin-top: 10px;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .telefono-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding: 10px;
+  }
+  
+  .telefono-input input {
+    border: none;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .telefono-input input:focus {
+    outline: none;
+  }
+  
+  .telefono-input .icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #007bff;
+  }
+  
+  .btn-confirmar {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-confirmar:hover {
+    background-color: #218838;
+  }
+  
+  .confirmacion-exitosa {
+    color: #28a745;
+  }
+  
+  .confirmacion-exitosa h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+  
+  .confirmacion-exitosa p {
+    font-size: 1.2rem;
+  }
+  

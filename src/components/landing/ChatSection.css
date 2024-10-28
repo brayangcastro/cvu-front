@@ -5,13 +5,13 @@
     margin-top: 40px;
   }
   
-  .text-column {
-    flex: 1;
-    padding-right: 20px;
+  .text-column, .chat-column {
+    flex: 1; /* Ambos elementos ocuparán el mismo espacio */
+    padding: 10px; /* Asegura un margen interno cómodo */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
   }
   
   .chat-column {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,7 +23,7 @@
     background-color: #e5ddd5;
     padding: 10px;
     border-radius: 10px;
-    overflow-y: auto;
+    overflow-y: auto; /* Para permitir scroll */
     border: 1px solid #ddd;
   }
   
@@ -35,16 +35,20 @@
     word-wrap: break-word;
   }
   
+  /* Mensajes del usuario alineados a la derecha */
   .user-message {
     background-color: #dcf8c6;
-    align-self: flex-end;
+    margin-left: auto; /* Empuja el cuadro a la derecha */
     border-radius: 10px 10px 0 10px;
+    text-align: right;
   }
   
+  /* Mensajes de la IA alineados a la izquierda */
   .ai-message {
     background-color: #fff;
-    align-self: flex-start;
+    margin-right: auto; /* Asegura que el cuadro esté alineado a la izquierda */
     border-radius: 10px 10px 10px 0;
+    text-align: left;
   }
   
   .chat-input {

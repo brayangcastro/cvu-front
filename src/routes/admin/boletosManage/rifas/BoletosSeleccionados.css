@@ -1,0 +1,40 @@
+.resumen-seleccion {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .seleccion-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .boleto-seleccionado {
+    background-color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 80px;
+    flex: 1 1 100px;
+    max-width: 120px;
+  }
+  
+  .btn-procesar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .btn-procesar:hover {
+    background-color: #0056b3;
+  }
+  

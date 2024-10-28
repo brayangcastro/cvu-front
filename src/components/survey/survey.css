@@ -1,0 +1,130 @@
+/* Estilo general del contenedor */
+.survey-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f4f7f9;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .survey-container:hover {
+    transform: scale(1.02);
+  }
+  
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin-bottom: 24px;
+  }
+  
+  /* Animación para el cambio de pregunta */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Estilos de cada pregunta */
+  .question-container {
+    margin-bottom: 20px;
+  }
+  
+  .question {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 12px;
+  }
+  
+  /* Estilo de las opciones */
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .option {
+    position: relative;
+    padding: 12px;
+    background: #e8eaf6;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .option:hover {
+    background: #c5cae9;
+  }
+  
+  .option input[type="radio"] {
+    display: none;
+  }
+  
+  /* Estilo del checkmark */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .option input:checked + .checkmark {
+    background-color: #3949ab;
+  }
+  
+  /* Estilo de los botones */
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .previous-btn, .next-btn, .submit-btn {
+    padding: 10px 16px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3949ab;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 48%; /* Asegura que todos los botones tengan el mismo ancho */
+  }
+  
+  .previous-btn:disabled, .next-btn:disabled, .submit-btn:disabled {
+    background-color: #b0bec5;
+    cursor: not-allowed;
+  }
+  
+  .previous-btn:hover:not(:disabled), .next-btn:hover:not(:disabled), .submit-btn:hover:not(:disabled) {
+    background-color: #303f9f;
+    transform: scale(1.05);
+  }
+  
+  /* Estilo distintivo del botón de enviar */
+  .submit-btn {
+    background-color: #43a047;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .submit-btn:hover:not(:disabled) {
+    background-color: #388e3c;
+  }
+  

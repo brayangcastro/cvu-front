@@ -1,0 +1,94 @@
+/* Estilo general del contenedor */
+.survey-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f4f7f9;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .survey-container:hover {
+    transform: scale(1.02);
+  }
+  
+  h2 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin-bottom: 24px;
+  }
+  
+  /* Estilos de cada pregunta */
+  .question-container {
+    margin-bottom: 20px;
+  }
+  
+  .question {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 12px;
+  }
+  
+  /* Estilo de las opciones */
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .option {
+    position: relative;
+    padding: 10px;
+    background: #e8eaf6;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .option:hover {
+    background: #c5cae9;
+  }
+  
+  .option input[type="radio"] {
+    display: none;
+  }
+  
+  /* Estilo del checkmark */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 24px;
+    width: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .option input:checked + .checkmark {
+    background-color: #3949ab;
+  }
+  
+  /* Estilo del botón de enviar */
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3949ab;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #303f9f;
+  }
+  

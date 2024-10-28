@@ -1,199 +1,184 @@
 /* Estilos generales para la landing page */
 .landing-container {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-  }
-  
-  /* Sección de imagen expandida */
-  .image-section {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .full-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Sección de contenido con imagen y texto en columnas */
-  .content-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 20px;
+}
+
+/* Sección de imagen expandida */
+.image-section {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sección de contenido con imagen y texto en columnas */
+.content-section {
+  display: flex;
+  justify-content: center; /* Centrar el contenido */
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px;
+}
+
+.text-column, .image-column, .chat-column {
+  flex: 1;
+  max-width: 50%; /* Asegura que cada columna ocupe el 50% */
+  box-sizing: border-box; /* Incluir padding y border en el ancho total */
+  padding: 0 20px;
+}
+
+.text-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-column h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0073e6;
+}
+
+.text-column p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.image-column img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Para invertir el orden de las columnas en pantallas grandes */
+.reverse .content {
+  flex-direction: row-reverse;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
   .content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 100%;
-    gap: 40px;
-  }
-  
-  .text-column, .image-column {
-    flex: 1;
-  }
-  
-  .text-column {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 20px;
   }
-  
+
   .text-column h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #0073e6;
+    font-size: 1.5rem;
   }
-  
+
   .text-column p {
-    font-size: 1.1rem;
-    line-height: 1.6;
+    font-size: 1rem;
   }
-  
+
   .image-column img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Para invertir el orden de las columnas en pantallas grandes */
-  .reverse .content {
-    flex-direction: row-reverse;
-  }
-  
-  /* Estilos responsivos */
-  @media (max-width: 768px) {
-    .content {
-      flex-direction: column;
-      gap: 20px;
-    }
-  
-    .text-column h2 {
-      font-size: 1.5rem;
-    }
-  
-    .text-column p {
-      font-size: 1rem;
-    }
-  
-    .image-column img {
-      border-radius: 5px;
-    }
-  }
-  
-
-
-  .video-section {
-    width: 100%;
-    height: 100vh; /* Altura de la ventana completa */
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .full-video {
-    width: 100%;
-    height: 100%;
-    border: none;
+    border-radius: 5px;
   }
 
-  .chart-column {
-    flex: 1;
-    min-height: 300px; /* Establece un tamaño mínimo */
-    width: 100%; /* Asegura que ocupe el ancho completo */
+  .text-column, .chat-column {
+    max-width: 100%; /* En pantallas pequeñas, ocupan el 100% del ancho */
   }
-  
-  
+}
 
+/* Estilos para el video */
+.video-section {
+  width: 100%;
+  height: 100vh; /* Altura de la ventana completa */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.full-video {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 
-  /*chat*/
+/* Estilos para las gráficas */
+.chart-column {
+  flex: 1;
+  min-height: 300px; /* Establece un tamaño mínimo */
+  width: 100%; /* Asegura que ocupe el ancho completo */
+}
 
-  .landing-container {
-    padding: 20px;
-  }
-  
-  .content-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 40px;
-  }
-  
-  .text-column {
-    flex: 1;
-    padding-right: 20px;
-  }
-  
-  .chat-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 400px;
-  }
-  
-  .chat-window {
-    flex-grow: 1;
-    background-color: #e5ddd5;
-    padding: 10px;
-    border-radius: 10px;
-    overflow-y: auto;
-    border: 1px solid #ddd;
-  }
-  
-  .message {
-    max-width: 70%;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 10px;
-    word-wrap: break-word;
-  }
-  
-  .user-message {
-    background-color: #dcf8c6;
-    align-self: flex-end;
-    border-radius: 10px 10px 0 10px;
-  }
-  
-  .ai-message {
-    background-color: #fff;
-    align-self: flex-start;
-    border-radius: 10px 10px 10px 0;
-  }
-  
-  .chat-input {
-    display: flex;
-    margin-top: 10px;
-  }
-  
-  .chat-input input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    margin-right: 10px;
-    font-size: 14px;
-  }
-  
-  .chat-input button {
-    background-color: #25d366;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    font-size: 14px;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-  
-  .chat-input button:hover {
-    background-color: #128c7e;
-  }
-  
+/* Estilos del chat */
+.chat-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+}
+
+.chat-window {
+  flex-grow: 1;
+  background-color: #e5ddd5;
+  padding: 10px;
+  border-radius: 10px;
+  overflow-y: auto; /* Para permitir scroll */
+  border: 1px solid #ddd;
+}
+
+.message {
+  max-width: 70%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+.user-message {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+  border-radius: 10px 10px 0 10px;
+}
+
+.ai-message {
+  background-color: #fff;
+  align-self: flex-start;
+  border-radius: 10px 10px 10px 0;
+}
+
+.chat-input {
+  display: flex;
+  margin-top: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.chat-input button {
+  background-color: #25d366;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #128c7e;
+}

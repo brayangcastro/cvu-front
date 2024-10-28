@@ -1,0 +1,105 @@
+/* Estilo moderno y tecnológico con fondo claro */
+
+/* Contenedor principal de la cuenta regresiva */
+.countdown-timer {
+    margin-bottom: 30px;
+    text-align: center;
+    background-color: #f7f9fc; /* Fondo suave y claro */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Contenedor de los elementos de la cuenta regresiva */
+  .countdown {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Para que los elementos se ajusten en pantallas pequeñas */
+  }
+  
+  /* Estilo de cada bloque de tiempo (días, horas, minutos, segundos) */
+  .countdown div {
+    background-color: #ffffff; /* Fondo blanco para cada bloque */
+    color: #007bff; /* Color de texto azul moderno */
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 2rem; /* Tamaño grande para pantallas grandes */
+    text-align: center;
+    min-width: 100px;
+    flex: 1; /* Para que los elementos se adapten al espacio disponible */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Sombra suave azul */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+  
+  .countdown div span {
+    display: block;
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #333; /* Color de texto más oscuro para el subtítulo */
+  }
+  
+  /* Animación al pasar el ratón sobre cada bloque */
+  .countdown div:hover {
+    transform: scale(1.05); /* Pequeño efecto de escala */
+  }
+  
+  /* Animación suave de fondo al hacer hover */
+  .countdown div::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.1), transparent);
+    transition: all 0.5s;
+    z-index: 0;
+  }
+  
+  .countdown div:hover::before {
+    top: -10%;
+    left: -10%;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.3), transparent);
+  }
+  
+  /* Aseguramos que el texto esté en la parte superior del efecto */
+  .countdown div span, .countdown div span + div {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Animación de entrada para los números */
+  @keyframes countdown-fade {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .countdown div {
+    animation: countdown-fade 0.6s ease-in-out;
+  }
+  
+  /* Adaptabilidad para dispositivos móviles */
+  @media (max-width: 768px) {
+    .countdown div {
+      font-size: 1.5rem; /* Tamaño más pequeño para móviles */
+      padding: 15px;
+      min-width: 80px; /* Reducimos el ancho mínimo en móviles */
+    }
+  
+    .countdown {
+      gap: 10px; /* Menos espacio entre los bloques en móviles */
+    }
+  }
+  

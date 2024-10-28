@@ -1,69 +1,75 @@
+/* Estilos de la sección Skills */
 .section {
-    padding: 20px;
-  }
-  
-  .sectionTitle {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
+  padding: 20px;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Lista de habilidades */
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skillList li {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  width: calc(33.333% - 40px);
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contenedor de iconos */
+.techIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.techIcon {
+  width: 60px;
+  height: 60px;
+}
+
+/* Texto de la habilidad */
+.skillText {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.skillList strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
   .skillList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .skillList li {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    text-align: left; /* Cambiar a texto alineado a la izquierda */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
-  .techIconContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
+
+  .skillList li {
+    width: 100%;
   }
-  
-  .techIcon {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .skillText {
-    font-size: 1rem;
-    color: #333;
-    text-align: center; /* Alinear el texto al centro */
-  }
-  
-  .skillList strong {
-    display: block;
-    margin-top: 10px;
-    font-size: 1.2rem;
-    color: #333;
-  }
-  
-  @media (max-width: 768px) {
-    .skillList {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .skillList li {
-      width: 100%;
-    }
-  }
-  
+}
