@@ -33,7 +33,7 @@ html, body {
 /* Ajuste del contenedor principal */
 .container {
   display: flex !important;
-  width: 100vw !important;
+  width: 100% !important;
   height: calc(100vh - 60px) !important;
   overflow-y: scroll !important;
   scrollbar-width: none; /* Firefox */
@@ -109,4 +109,24 @@ html, body {
   color: #1a1a2e;
   border-radius: 4px;
   cursor: pointer;
+}
+
+
+
+/* Ajustes para pantallas móviles */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del contenedor a columna */
+  }
+  
+  .sidebar {
+    width: 100%; /* Ocupa todo el ancho en versión móvil */
+    flex: none; /* Evita que el sidebar ocupe una proporción fija */
+  }
+  
+  .mainContent {
+    width: 100%; /* Ocupa todo el ancho en versión móvil */
+    padding: 20px !important; /* Ajusta el padding si es necesario */
+  }
 }
