@@ -52,7 +52,7 @@ const CVU = () => {
               <FontAwesomeIcon icon={faEnvelope} className="icon" />
               <span>brayan-castro@hotmail.com</span>
             </div>
-            <div className="contactInfo">
+            <div className="contactInfo" hidden>
               <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
               <span>Guasave, Sinaloa CP81020</span>
             </div>

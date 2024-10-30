@@ -29,7 +29,7 @@ const DownloadSection = ({ language }) => {
             src={urlReporteIndustrial}
             title={texts.previewTitle}
             width="100%"
-            height="800px"
+            height="300px"
           />
         </div>
       )}
