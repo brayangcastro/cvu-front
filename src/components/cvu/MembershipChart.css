@@ -1,0 +1,48 @@
+.membership-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+  
+  .membership-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+  }
+  
+  .text-column {
+    flex: 1;
+    padding-right: 40px;
+  }
+  
+  .text-column h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .text-column p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .chart-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .chart-column .recharts-tooltip-wrapper {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .recharts-legend-item-text {
+    font-size: 14px;
+    color: #555;
+  }
+  

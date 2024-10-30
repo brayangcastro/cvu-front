@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import './CVU.css';
@@ -8,8 +8,28 @@ import Experience from './Experience';
 import Skills from './Skills';
 import translations from './translations'; // Importar el archivo de traducciones
 
+
+ 
+import MembershipChart from './MembershipChart'; 
+import ChatSection from './ChatSection';
+import SalesChart from './SalesChart';
+import useLazyLoad from './useLazyLoad';  // Importa el hook personalizado
+import DownloadSection from './DownloadSection';  // Importar la nueva sección de descarga de PDF
 const CVU = () => {
   const [language, setLanguage] = useState('en'); // Estado para el idioma
+
+  const powerControlRef = useRef(null);
+  const membershipChartRef = useRef(null);
+  const chatSectionRef = useRef(null);
+  const salesChartRef = useRef(null);
+  const videoSectionRef = useRef(null);  // Ref para el video
+
+  const isPowerControlVisible = useLazyLoad(powerControlRef);
+  const isMembershipChartVisible = useLazyLoad(membershipChartRef);
+  const isChatSectionVisible = useLazyLoad(chatSectionRef);
+  const isSalesChartVisible = useLazyLoad(salesChartRef);
+  const isVideoVisible = useLazyLoad(videoSectionRef);  // Lazy loading para el video
+
 
   const handleLanguageChange = (event) => {
     setLanguage(event.target.value); // Cambiar el idioma seleccionado
@@ -43,11 +63,11 @@ const CVU = () => {
               <FontAwesomeIcon icon={faPhone} className="icon" />
               <span>(687) 1731093</span>
             </div>
-            <div className="contactInfo">
+            <div className="contactInfo" hidden>
               <FontAwesomeIcon icon={faEnvelope} className="icon" />
               <span>brayan-castro@hotmail.com</span>
             </div>
-            <div className="contactInfo">
+            <div className="contactInfo" hidden>
               <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
               <span>Guasave, Sinaloa CP81020</span>
             </div>
@@ -73,7 +93,15 @@ const CVU = () => {
           </section>
 
           <Experience  language={language}/>
-        </main>
+      
+ 
+ 
+     
+      
+        {/* Sección de descarga de PDF */}
+        <DownloadSection language={language}/>
+
+      </main>
       </div>
     </div>
   );

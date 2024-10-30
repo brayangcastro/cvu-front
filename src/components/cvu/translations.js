@@ -1,6 +1,12 @@
 const translations = {
     es: {
-      role: "Ingeniero en Mecatrónica",
+      downloadTitle: "Descargar CVU en PDF",
+      downloadDescription: "Haz clic en el botón de abajo para descargar mi CVU. El archivo PDF se abrirá para que puedas visualizarlo antes de guardarlo.",
+      downloadButton: "Descargar CVU",
+      previewTitle: "Vista Previa del CVU en PDF",
+
+      
+      role: "Desarrollador Full Stack con Experiencia | Ingeniero Mecatrónica",
       objective: "Objetivo Profesional",
       professionalObjective: "Mi objetivo es participar en el desarrollo de tecnología innovadora que marque la diferencia en la industria. Busco involucrarme en proyectos de vanguardia que utilicen las últimas tecnologías para crear soluciones escalables y disruptivas. Estoy comprometido con generar resultados que no solo sean rentables, sino que también tengan un impacto significativo. Mi enfoque está en aprender continuamente y colaborar con equipos que busquen llevar la tecnología al siguiente nivel, contribuyendo tanto al éxito empresarial como a mi crecimiento personal y profesional.",
       education: "Educación",
@@ -54,7 +60,12 @@ const translations = {
     }
     },
     en: {
-      role: "Mechatronic Engineer",
+      downloadTitle: "Download CVU in PDF",
+      downloadDescription: "Click the button below to download my CVU. The PDF will open for preview before you save it.",
+      downloadButton: "Download CVU",
+      previewTitle: "CVU PDF Preview",
+
+      role: "Experienced Full Stack Developer | IoT & Mechatronics Engineer",
       objective: "Professional Objective",
       professionalObjective: "My goal is to participate in the development of innovative technology that makes a difference in the industry. I seek to get involved in cutting-edge projects that leverage the latest technologies to create scalable and disruptive solutions. I am committed to generating results that are not only profitable but also have a significant impact. My focus is on continuous learning and collaborating with teams that strive to take technology to the next level, contributing both to business success and to my personal and professional growth.",
       education: "Education",

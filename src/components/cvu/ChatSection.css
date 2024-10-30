@@ -1,0 +1,81 @@
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+  }
+  
+  .text-column, .chat-column {
+    flex: 1; /* Ambos elementos ocuparán el mismo espacio */
+    padding: 10px; /* Asegura un margen interno cómodo */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+  }
+  
+  .chat-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+  }
+  
+  .chat-window {
+    flex-grow: 1;
+    background-color: #e5ddd5;
+    padding: 10px;
+    border-radius: 10px;
+    overflow-y: auto; /* Para permitir scroll */
+    border: 1px solid #ddd;
+  }
+  
+  .message {
+    max-width: 70%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    word-wrap: break-word;
+  }
+  
+  /* Mensajes del usuario alineados a la derecha */
+  .user-message {
+    background-color: #dcf8c6;
+    margin-left: auto; /* Empuja el cuadro a la derecha */
+    border-radius: 10px 10px 0 10px;
+    text-align: right;
+  }
+  
+  /* Mensajes de la IA alineados a la izquierda */
+  .ai-message {
+    background-color: #fff;
+    margin-right: auto; /* Asegura que el cuadro esté alineado a la izquierda */
+    border-radius: 10px 10px 10px 0;
+    text-align: left;
+  }
+  
+  .chat-input {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .chat-input button {
+    background-color: #25d366;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .chat-input button:hover {
+    background-color: #128c7e;
+  }
+  
