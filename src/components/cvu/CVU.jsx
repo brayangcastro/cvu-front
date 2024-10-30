@@ -1,4 +1,4 @@
-import React, { useState,useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faMapMarkerAlt, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import './CVU.css';
@@ -6,30 +6,15 @@ import CVUImage from './CVU_pic.jpg';
 import SlidingBar from './SlidingBar';
 import Experience from './Experience';
 import Skills from './Skills';
-import translations from './translations'; // Importar el archivo de traducciones
-
-
- 
+import translations from './translations'; // Importar las traducciones
 import MembershipChart from './MembershipChart'; 
 import ChatSection from './ChatSection';
 import SalesChart from './SalesChart';
 import useLazyLoad from './useLazyLoad';  // Importa el hook personalizado
 import DownloadSection from './DownloadSection';  // Importar la nueva sección de descarga de PDF
+
 const CVU = () => {
   const [language, setLanguage] = useState('en'); // Estado para el idioma
-
-  const powerControlRef = useRef(null);
-  const membershipChartRef = useRef(null);
-  const chatSectionRef = useRef(null);
-  const salesChartRef = useRef(null);
-  const videoSectionRef = useRef(null);  // Ref para el video
-
-  const isPowerControlVisible = useLazyLoad(powerControlRef);
-  const isMembershipChartVisible = useLazyLoad(membershipChartRef);
-  const isChatSectionVisible = useLazyLoad(chatSectionRef);
-  const isSalesChartVisible = useLazyLoad(salesChartRef);
-  const isVideoVisible = useLazyLoad(videoSectionRef);  // Lazy loading para el video
-
 
   const handleLanguageChange = (event) => {
     setLanguage(event.target.value); // Cambiar el idioma seleccionado
@@ -39,7 +24,7 @@ const CVU = () => {
 
   return (
     <div>
-      <SlidingBar language={language}/> {/* Añadir la barra superior */}
+      <SlidingBar language={language} /> {/* Añadir la barra superior */}
 
       {/* Selector de idioma */}
       <div className="languageSelector">
@@ -51,8 +36,8 @@ const CVU = () => {
       </div>
 
       <div className="container">
-        {/* Barra lateral */}
-        <aside className="sidebar">
+        {/* Sección 1 */}
+        <aside className="section1">
           <div className="photoContainer">
             <img src={CVUImage} alt="Foto de perfil" className="photo" />
           </div>
@@ -63,19 +48,19 @@ const CVU = () => {
               <FontAwesomeIcon icon={faPhone} className="icon" />
               <span>(687) 1731093</span>
             </div>
-            <div className="contactInfo" hidden>
+            <div className="contactInfo">
               <FontAwesomeIcon icon={faEnvelope} className="icon" />
               <span>brayan-castro@hotmail.com</span>
             </div>
-            <div className="contactInfo" hidden>
+            <div className="contactInfo">
               <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
               <span>Guasave, Sinaloa CP81020</span>
             </div>
           </section>
         </aside>
 
-        {/* Sección principal */}
-        <main className="mainContent">
+        {/* Sección 2 */}
+        <main className="section2">
           <section className="section">
             <h2 className="sectionTitle">{texts.objective}</h2>
             <p className="text">{texts.professionalObjective}</p>
@@ -92,16 +77,10 @@ const CVU = () => {
             <p className="text"><strong>Técnico en Informática</strong> - CETIS 108 (2005 – 2008)</p>
           </section>
 
-          <Experience  language={language}/>
-      
- 
- 
-     
-      
-        {/* Sección de descarga de PDF */}
-        <DownloadSection language={language}/>
-
-      </main>
+          <Experience language={language} />
+          
+          <DownloadSection language={language} />
+        </main>
       </div>
     </div>
   );

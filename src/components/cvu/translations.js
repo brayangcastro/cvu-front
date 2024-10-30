@@ -4,7 +4,7 @@ const translations = {
       downloadDescription: "Haz clic en el botón de abajo para descargar mi CVU. El archivo PDF se abrirá para que puedas visualizarlo antes de guardarlo.",
       downloadButton: "Descargar CVU",
       previewTitle: "Vista Previa del CVU en PDF",
-
+    
       
       role: "Desarrollador Full Stack con Experiencia | Ingeniero Mecatrónica",
       objective: "Objetivo Profesional",
@@ -37,6 +37,7 @@ const translations = {
 
       experienceTitle: "Experiencia Profesional",
     experience: {
+      viewDemo: "Ver Demo" ,
       bcIngenieria: {
         title: "BCIngeniería - Fundador y Desarrollador de Proyectos de Ingeniería (Actualidad)",
         description: "Desarrollo de módulos de sensado y control para la industria utilizando tecnologías como Modbus, RS232, y señales analógicas y digitales. Implementación de visualizaciones tridimensionales en tiempo real basadas en datos de sensores, con alertas automáticas enviadas por WhatsApp ante eventos críticos."
@@ -56,10 +57,15 @@ const translations = {
       tacosKissi: {
         title: "Tacos Kissi - Desarrollador de Software Comandero (2023)",
         description: "Desarrollo de un software comandero para restaurantes con una interfaz intuitiva y amigable."
+      },
+      kotsala: {
+        title: "Kotsala Invernaderos Inteligentes",
+        description: "Asesor en un prototipo de automatización de invernaderos, utilizando visión artificial, IoT, chatbots e IA."
       }
     }
     },
     en: {
+    
       downloadTitle: "Download CVU in PDF",
       downloadDescription: "Click the button below to download my CVU. The PDF will open for preview before you save it.",
       downloadButton: "Download CVU",
@@ -94,6 +100,7 @@ const translations = {
       },
       experienceTitle: "Professional Experience",
       experience: {
+        viewDemo: "View Demo" ,
         bcIngenieria: {
           title: "BCIngeniería - Founder and Engineering Project Developer (Present)",
           description: "Development of sensing and control modules for the industry using technologies such as Modbus, RS232, and analog and digital signals. Implementation of real-time 3D visualizations based on sensor data, with automatic alerts sent via WhatsApp for critical events."
@@ -113,6 +120,10 @@ const translations = {
         tacosKissi: {
           title: "Tacos Kissi - Restaurant Ordering Software Developer (2023)",
           description: "Development of ordering software for restaurants with an intuitive and user-friendly interface."
+        },
+        kotsala: {
+          title: "Kotsala Smart Greenhouses",
+          description: "Advisor on a prototype for greenhouse automation, utilizing computer vision, IoT, chatbots, and AI."
         }
       }
     }
