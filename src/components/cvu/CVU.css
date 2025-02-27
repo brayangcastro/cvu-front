@@ -146,3 +146,22 @@ html, body {
   cursor: pointer;
   outline: none;
 }
+
+.languageSelector2 {
+  position: absolute;
+  top: 10px;
+  right: 120px;
+  z-index: 1100;
+  font-size: 0.9rem;
+}
+
+.languageSelector2 select {
+  padding: 5px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  background-color: #ffd700;
+  color: #1a1a2e;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}

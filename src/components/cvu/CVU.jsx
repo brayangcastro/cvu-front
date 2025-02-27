@@ -35,6 +35,8 @@ const CVU = () => {
         </select>
       </div>
 
+     
+
       <div className="container">
         {/* Sección 1 */}
         <aside className="section1">
