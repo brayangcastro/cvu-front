@@ -17,8 +17,8 @@ const DownloadSection = ({ language }) => {
 
     link.href = fileToDownload;
     link.download = language === "es"
-      ? "CV_Brayan_Castro_ES.pdf"
-      : "CV_Brayan_Castro_EN.pdf";
+      ? "CV_Brayan_Castro_Spanish.pdf"
+      : "CV_Brayan_Castro_English.pdf";
 
     link.target = "_blank";
     link.click();
