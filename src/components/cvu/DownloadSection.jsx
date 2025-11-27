@@ -3,8 +3,8 @@ import './DownloadSection.css';
 import translations from './translations';
 
 // Importar PDFs por idioma
-import CVSpanish from './pdf/CV Brayan Castro Spanish.pdf';
-import CVEnglish from './pdf/CV Brayan Castro English.pdf';
+import CVSpanish from './pdf/CV_Brayan_Castro_Spanish.pdf';
+import CVEnglish from './pdf/CV_Brayan_Castro_English.pdf';
 
 const DownloadSection = ({ language }) => {
   const [showPDF, setShowPDF] = useState(null);
