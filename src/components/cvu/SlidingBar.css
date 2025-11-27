@@ -33,3 +33,21 @@
     }
   }
   
+
+  /* --- Fix para que NO tape en móvil --- */
+@media (max-width: 768px) {
+  .slidingBarContainer {
+    position: relative !important;
+    height: auto !important;
+    padding: 8px 0;
+    box-shadow: none;
+  }
+
+  .slidingBarMessage {
+    animation: none;
+    white-space: normal;
+    padding: 4px 12px;
+    font-size: 1rem;
+    text-align: center;
+  }
+}

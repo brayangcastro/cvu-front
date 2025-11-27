@@ -1,35 +1,52 @@
 import React, { useState } from 'react';
 import './DownloadSection.css';
-import translations from './translations';  // Importa las traducciones
+import translations from './translations';
 
-const urlReporteIndustrial = import.meta.env.VITE_APP_REPORTE_INDUSTRIAL;
+// Importar PDFs por idioma
+import CVSpanish from './pdf/CV Brayan Castro Spanish.pdf';
+import CVEnglish from './pdf/CV Brayan Castro English.pdf';
 
 const DownloadSection = ({ language }) => {
-  const [showPDF, setShowPDF] = useState(false);
-
-  // Obtener los textos según el idioma seleccionado
+  const [showPDF, setShowPDF] = useState(null);
   const texts = translations[language];
 
   const handleDownload = () => {
-    setShowPDF(true);
+    const link = document.createElement("a");
+
+    const fileToDownload = language === "es" ? CVSpanish : CVEnglish;
+
+    link.href = fileToDownload;
+    link.download = language === "es"
+      ? "CV_Brayan_Castro_ES.pdf"
+      : "CV_Brayan_Castro_EN.pdf";
+
+    link.target = "_blank";
+    link.click();
+  };
+
+  const handlePreview = () => {
+    const fileToPreview = language === "es" ? CVSpanish : CVEnglish;
+    setShowPDF(fileToPreview);
   };
 
   return (
-    <div className="download-section">
-      <h2>{texts.downloadTitle}</h2>
-      <p>{texts.downloadDescription}</p>
-      <button className="download-button" onClick={handleDownload}>
+    <div className="cv-download-section">
+      <h2 className="cv-download-title">{texts.downloadTitle}</h2>
+      <p className="cv-download-text">{texts.downloadDescription}</p>
+
+      <button className="cv-download-button" onClick={handleDownload}>
         {texts.downloadButton}
       </button>
 
-      {/* Simulación de la vista previa del PDF */}
+      <button className="cv-download-button" style={{ marginLeft: 10 }} onClick={handlePreview}>
+        {texts.previewButton}
+      </button>
+
       {showPDF && (
-        <div className="pdf-preview">
+        <div className="cv-download-preview">
           <iframe 
-            src={urlReporteIndustrial}
+            src={showPDF}
             title={texts.previewTitle}
-            width="100%"
-            height="300px"
           />
         </div>
       )}

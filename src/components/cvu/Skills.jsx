@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import './Skills.css';  // Asegúrate de importar este archivo
+import React from 'react';
+import './Skills.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-import translations from './translations';  // Importar las traducciones
+import translations from './translations';
 
-// Importar imágenes de tecnologías
 import AWSIcon from './tecnologias/aws.png';
 import JSIcon from './tecnologias/JS.png';
 import LinuxIcon from './tecnologias/linux.png';
@@ -15,58 +14,69 @@ import ReactIcon from './tecnologias/react.png';
 import Chatbot from './tecnologias/chatbot.png';
 import Openai from './tecnologias/openai.png';
 import AmazonLinux from './tecnologias/awslinux.png';
+import GoIcon from './tecnologias/goicon.png';
+import ESP32Icon from './tecnologias/esp32.png';
 
 const Skills = ({ language }) => {
-  // Obtener los textos de las traducciones según el idioma seleccionado
   const texts = translations[language];
 
   return (
-    <section className="section">
-      <h2 className="sectionTitle">
-        <FontAwesomeIcon icon={faLaptopCode} className="iconTitle" />
+    <section className="cv-skill-section">
+
+      <h2 className="cv-skill-title">
+        <FontAwesomeIcon icon={faLaptopCode} /> &nbsp;
         {texts.skillsTitle}
       </h2>
-      <ul className="skillList">
-        <li>
-          <div className="techIconContainer">
-            <img src={NodeJSIcon} alt="Node.js" className="techIcon" />
-            <img src={MySQLIcon} alt="MySQL" className="techIcon" />
+
+      <ul className="cv-skill-list">
+
+        <li className="cv-skill-card">
+          <div className="cv-skill-icons">
+            <img src={NodeJSIcon} className="cv-skill-icon" alt="" />
+            <img src={MySQLIcon} className="cv-skill-icon" alt="" />
+            <img src={GoIcon} className="cv-skill-icon" alt="" />
           </div>
-          <strong>{texts.backend.title}</strong>
-          <p className="skillText">{texts.backend.description}</p>
+          <strong className="cv-skill-name">{texts.backend.title}</strong>
+          <p className="cv-skill-text">{texts.backend.description}</p>
         </li>
-        <li>
-          <div className="techIconContainer">
-            <img src={ReactIcon} alt="React" className="techIcon" />
-            <img src={JSIcon} alt="JavaScript" className="techIcon" />
+
+        <li className="cv-skill-card">
+          <div className="cv-skill-icons">
+            <img src={ReactIcon} className="cv-skill-icon" alt="" />
+            <img src={JSIcon} className="cv-skill-icon" alt="" />
           </div>
-          <strong>{texts.frontend.title}</strong>
-          <p className="skillText">{texts.frontend.description}</p>
+          <strong className="cv-skill-name">{texts.frontend.title}</strong>
+          <p className="cv-skill-text">{texts.frontend.description}</p>
         </li>
-        <li>
-          <div className="techIconContainer">
-            <img src={PythonIcon} alt="Python" className="techIcon" />
-            <img src={LinuxIcon} alt="Linux" className="techIcon" />
+
+        <li className="cv-skill-card">
+          <div className="cv-skill-icons">
+            <img src={PythonIcon} className="cv-skill-icon" alt="" />
+            <img src={LinuxIcon} className="cv-skill-icon" alt="" />
+            <img src={ESP32Icon} className="cv-skill-icon" alt="" />
           </div>
-          <strong>{texts.microcontrollers.title}</strong>
-          <p className="skillText">{texts.microcontrollers.description}</p>
+          <strong className="cv-skill-name">{texts.microcontrollers.title}</strong>
+          <p className="cv-skill-text">{texts.microcontrollers.description}</p>
         </li>
-        <li>
-          <div className="techIconContainer">
-            <img src={Chatbot} alt="Chatbot" className="techIcon" />
-            <img src={Openai} alt="OpenAI" className="techIcon" />
+
+        <li className="cv-skill-card">
+          <div className="cv-skill-icons">
+            <img src={Openai} className="cv-skill-icon" alt="" />
+            <img src={Chatbot} className="cv-skill-icon" alt="" />
           </div>
-          <strong>{texts.apis.title}</strong>
-          <p className="skillText">{texts.apis.description}</p>
+          <strong className="cv-skill-name">{texts.apis.title}</strong>
+          <p className="cv-skill-text">{texts.apis.description}</p>
         </li>
-        <li>
-          <div className="techIconContainer">
-            <img src={AWSIcon} alt="AWS" className="techIcon" />
-            <img src={AmazonLinux} alt="Amazon Linux" className="techIcon" />
+
+        <li className="cv-skill-card">
+          <div className="cv-skill-icons">
+            <img src={AWSIcon} className="cv-skill-icon" alt="" />
+            <img src={AmazonLinux} className="cv-skill-icon" alt="" />
           </div>
-          <strong>{texts.aws.title}</strong>
-          <p className="skillText">{texts.aws.description}</p>
+          <strong className="cv-skill-name">{texts.aws.title}</strong>
+          <p className="cv-skill-text">{texts.aws.description}</p>
         </li>
+
       </ul>
     </section>
   );

@@ -1,132 +1,248 @@
 const translations = {
-    es: {
-      downloadTitle: "Descargar CVU en PDF",
-      downloadDescription: "Haz clic en el botón de abajo para descargar mi CVU. El archivo PDF se abrirá para que puedas visualizarlo antes de guardarlo.",
-      downloadButton: "Descargar CVU",
-      previewTitle: "Vista Previa del CVU en PDF",
+  es: {
     
-      
-      role: "Desarrollador Full Stack con Experiencia | Ingeniero Mecatrónica",
-      objective: "Objetivo Profesional",
-      professionalObjective: "Mi objetivo es participar en el desarrollo de tecnología innovadora que marque la diferencia en la industria. Busco involucrarme en proyectos de vanguardia que utilicen las últimas tecnologías para crear soluciones escalables y disruptivas. Estoy comprometido con generar resultados que no solo sean rentables, sino que también tengan un impacto significativo. Mi enfoque está en aprender continuamente y colaborar con equipos que busquen llevar la tecnología al siguiente nivel, contribuyendo tanto al éxito empresarial como a mi crecimiento personal y profesional.",
-      education: "Educación",
-      contactInfo: "Información de Contacto",
-      skillsTitle: "Habilidades Técnicas",
-      slidingBarMessage: "¡Bienvenido a mi CV! Desarrollador Full Stack - Innovación en tecnología y automatización.",
-      backend: {
-        title: "Backend:",
-        description: "Desarrollo de sistemas escalables con Node.js, Express, y MySQL, incluyendo sistemas de puntos de venta."
-      },
-      frontend: {
-        title: "Frontend:",
-        description: "Desarrollo de interfaces dinámicas con React para optimizar la experiencia del usuario."
-      },
-      microcontrollers: {
-        title: "Microcontroladores y Raspberry Pi:",
-        description: "Programación y gestión de sensores y controles con Modbus, RS232, y 4-20 mA."
-      },
-      apis: {
-        title: "Integración de APIs y Chatbots:",
-        description: "Creación de chatbots de WhatsApp con IA, integrando APIs como OpenAI."
-      },
-      aws: {
-        title: "Despliegue en AWS:",
-        description: "Configuración y manejo de instancias en AWS para aplicaciones de Node.js y React."
-      }
-,
+    downloadDescription: "Haz clic en el botón para descargar mi CV en formato PDF.",
+downloadButton: "Descargar CV",
+previewButton: "Ver en línea",
+previewTitle: "Vista previa",
 
-      experienceTitle: "Experiencia Profesional",
-    experience: {
-      viewDemo: "Ver Demo" ,
-      bcIngenieria: {
-        title: "BCIngeniería - Fundador y Desarrollador de Proyectos de Ingeniería (Actualidad)",
-        description: "Desarrollo de módulos de sensado y control para la industria utilizando tecnologías como Modbus, RS232, y señales analógicas y digitales. Implementación de visualizaciones tridimensionales en tiempo real basadas en datos de sensores, con alertas automáticas enviadas por WhatsApp ante eventos críticos."
-      },
-      neerd: {
-        title: "Neerd E-Learning - Desarrollador de Software AI (2023 – 2024)",
-        description: "Desarrollo de visualizaciones interactivas con React y dashboards en tiempo real. Implementación de API de OpenAI para el procesamiento de datos en AWS, integrando metodologías estudiadas por psicólogos expertos para plataformas de orientación vocacional."
-      },
-      aqqua: {
-        title: "Aqqua - Software de Gestión de Gimnasios (2022)",
-        description: "Un sistema de gestión integral diseñado específicamente para gimnasios y centros de fitness. Automatiza la gestión de pagos y membresías, y optimiza la programación de clases a través de una herramienta basada en chat, simplificando la administración general del negocio."
-      },
-      puntoMagico: {
-        title: "PuntoMágico - Desarrollador de Punto de Venta (2023)",
-        description: "Desarrollo de un sistema de punto de venta adaptado para negocios de productos diversos, con un sistema de captura fácil de productos y ventas eficientes."
-      },
-      tacosKissi: {
-        title: "Tacos Kissi - Desarrollador de Software Comandero (2023)",
-        description: "Desarrollo de un software comandero para restaurantes con una interfaz intuitiva y amigable."
-      },
-      kotsala: {
-        title: "Kotsala Invernaderos Inteligentes",
-        description: "Asesor en un prototipo de automatización de invernaderos, utilizando visión artificial, IoT, chatbots e IA."
-      }
-    }
+
+    role: "Ingeniero Full Stack • IoT Engineer • Arquitecto Cloud",
+    objective: "Resumen Profesional",
+
+    professionalObjective: `
+Ingeniero Full Stack especializado en integrar software, IoT, IA y hardware en soluciones completas.
+Desarrollo plataformas SaaS, microservicios, dashboards, chatbots con IA, automatización industrial e
+infraestructura cloud en AWS. Trabajo desde el prototipo hasta producción, creando tecnología que
+escala y genera impacto real.
+`,
+
+   education: "Educación",
+
+educationList: [
+  {
+    title: "Ingeniería Mecatrónica — Nivel Licenciatura",
+    school: "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM-CSN)",
+    period: "2008 – 2013",
+    details: [
+      "Promedio general de 97.2",
+      "Graduado con honores por obtener el promedio más alto de la generación"
+    ]
+  },
+  {
+    title: "Técnico en Informática",
+    school: "CETIS 108",
+    period: "2005 – 2008",
+    details: [
+      "Promedio general de 100.0",
+      "Ganador de dos concursos internacionales de proyectos"
+    ]
+  }
+],
+
+    contactInfo: "Contacto",
+    skillsTitle: "Habilidades Técnicas",
+    slidingBarMessage: "Bienvenido — Full Stack • IoT • Cloud • IA",
+
+    backend: {
+      title: "Backend & Microservicios",
+      description: `
+Arquitecturas escalables con Node.js, Express, MySQL, REST APIs, WebSockets, integración con WhatsApp API,
+microservicios en Python y Go, seguridad y comunicación con hardware e IoT.`
     },
-    en: {
-    
-      downloadTitle: "Download CVU in PDF",
-      downloadDescription: "Click the button below to download my CVU. The PDF will open for preview before you save it.",
-      downloadButton: "Download CVU",
-      previewTitle: "CVU PDF Preview",
 
-      role: "Experienced Full Stack Developer | IoT & Mechatronics Engineer",
-      objective: "Professional Objective",
-      professionalObjective: "My goal is to participate in the development of innovative technology that makes a difference in the industry. I seek to get involved in cutting-edge projects that leverage the latest technologies to create scalable and disruptive solutions. I am committed to generating results that are not only profitable but also have a significant impact. My focus is on continuous learning and collaborating with teams that strive to take technology to the next level, contributing both to business success and to my personal and professional growth.",
-      education: "Education",
-      contactInfo: "Contact Information",
-      skillsTitle: "Technical Skills",
-      slidingBarMessage: "Welcome to my CV! Full Stack Developer - Innovation in technology and automation.",
-      backend: {
-        title: "Backend:",
-        description: "Development of scalable systems with Node.js, Express, and MySQL, including point of sale systems."
+    frontend: {
+      title: "Frontend Moderno",
+      description: `
+Interfaces modernas con React, Vite, Tailwind, dashboards en tiempo real, visualización de datos,
+UI/UX, diseño responsivo y sistemas interactivos.`
+    },
+
+    microcontrollers: {
+      title: "IoT, Sensores & Hardware",
+      description: `
+ESP32, Raspberry Pi, MicroPython, Modbus RTU/TCP, RS232, 4-20 mA, ADC, control de actuadores,
+lectura de sensores industriales, SIM800L, FTDI, LoRa, cámaras IP y visión artificial con OpenCV.`
+    },
+
+    apis: {
+      title: "Chatbots, IA & Automatización",
+      description: `
+Integración con OpenAI (texto, visión, realtime), chatbots avanzados para WhatsApp, MM Lite, sistemas de
+membresías, POS, cobros automáticos, lectura de audio, plantillas inteligentes y automatización empresarial.`
+    },
+
+    aws: {
+      title: "Cloud, DevOps & Arquitectura",
+      description: `
+EC2, S3, CloudFront, Lambda, RDS, DynamoDB, IoT Core, Route53, ACM, IAM, SSL, CI/CD, Docker, PM2,
+monitoreo, optimización de costos y seguridad.`
+    },
+
+    experienceTitle: "Experiencia Profesional",
+
+    experience: {
+      viewDemo: "Ver Demo",
+
+      viewDemo2: "Ver Demo Control",
+
+      chatbotya: {
+        title: "ChatbotYa — Founder & Lead Developer (2022–Actualidad)",
+        description: `
+Plataforma modular con IA + WhatsApp + Web para agenda, inventarios, boletos, POS y automatizaciones.
+Desarrollo backend en Node.js/Express, frontend en React/Vite y arquitectura multi-tenant en AWS.`
       },
-      frontend: {
-        title: "Frontend:",
-        description: "Development of dynamic interfaces with React to optimize user experience."
+
+      tuconta: {
+        title: "TuContaOnline — Full Stack Engineer / Cloud Architect (2024–Actualidad)",
+        description: `
+Automatización contable mediante análisis de XML del SAT, dashboards inteligentes y chatbot con IA para
+recordatorios, acuses y gestión documental. Backend Node.js + Python, frontend React, base MySQL y despliegue AWS.`
       },
-      microcontrollers: {
-        title: "Microcontrollers and Raspberry Pi:",
-        description: "Programming and management of sensors and controls with Modbus, RS232, and 4-20 mA."
+
+      robocall: {
+        title: "RoboCall — Software + Hardware Developer (2024–Actualidad)",
+        description: `
+Sistema de marcación automática con IA, generación de audios, panel React, backend Node.js, microservicios en Python
+para procesamiento de audio y hardware GSM diseñado desde cero. Próximo paso: agente con IA para llamadas.`
       },
-      apis: {
-        title: "API Integration and Chatbots:",
-        description: "Creation of WhatsApp chatbots with AI, integrating APIs like OpenAI."
+
+      monitorIoT: {
+        title: "Monitor IoT — Plataforma de Monitoreo Industrial (2022–Actualidad)",
+        description: `
+Dashboards en tiempo real con sensores industriales, telemetría MQTT, AWS IoT Core, alertas por WhatsApp e
+integración con Raspberry Pi.`
       },
-      aws: {
-        title: "Deployment on AWS:",
-        description: "Configuration and management of AWS instances for Node.js and React applications."
-      },
-      experienceTitle: "Professional Experience",
-      experience: {
-        viewDemo: "View Demo" ,
-        bcIngenieria: {
-          title: "BCIngeniería - Founder and Engineering Project Developer (Present)",
-          description: "Development of sensing and control modules for the industry using technologies such as Modbus, RS232, and analog and digital signals. Implementation of real-time 3D visualizations based on sensor data, with automatic alerts sent via WhatsApp for critical events."
-        },
-        neerd: {
-          title: "Neerd E-Learning - AI Software Developer (2023 – 2024)",
-          description: "Development of interactive visualizations with React and real-time dashboards. Implementation of OpenAI API for data processing in AWS, integrating methodologies studied by expert psychologists for vocational guidance platforms."
-        },
-        aqqua: {
-          title: "Aqqua - Gym Management Software (2022)",
-          description: "A comprehensive management system designed specifically for gyms and fitness centers. It automates payment and membership management, and streamlines class scheduling through a chat-driven tool, simplifying overall business administration."
-        },
-        puntoMagico: {
-          title: "PuntoMágico - Point of Sale Developer (2023)",
-          description: "Development of a point of sale system adapted for diverse product businesses, with an easy product capture system and efficient sales."
-        },
-        tacosKissi: {
-          title: "Tacos Kissi - Restaurant Ordering Software Developer (2023)",
-          description: "Development of ordering software for restaurants with an intuitive and user-friendly interface."
-        },
-        kotsala: {
-          title: "Kotsala Smart Greenhouses",
-          description: "Advisor on a prototype for greenhouse automation, utilizing computer vision, IoT, chatbots, and AI."
-        }
+
+      kotsala: {
+        title: "Kotsala — Invernaderos Inteligentes (2024–Actualidad)",
+        description: `
+Sistema de automatización agrícola con sensores NPK, humedad, visión artificial, IoT, control remoto y chatbots para
+operación inteligente.`
       }
     }
-  };
+  },
+
+  // ------------------- ENGLISH VERSION ---------------------------------
+
+  en: {
    
+    downloadDescription: "Click to download my CV in PDF format.",
+  downloadButton: "Download CV",
+previewButton: "Preview Online",
+previewTitle: "CV Preview",
+    
+
+    role: "Full Stack Developer • IoT Engineer • Cloud Architect",
+    objective: "Professional Summary",
+
+    professionalObjective: `
+Full Stack Engineer specialized in delivering end-to-end systems combining software, IoT, AI and hardware.
+Experienced building SaaS platforms, microservices, automation systems, AI chatbots and AWS cloud infrastructure.
+I build technology that scales and creates meaningful impact.
+`,
+
+   education: "Education",
+
+educationList: [
+  {
+    title: "Bachelor of Mechatronics Engineering",
+    school: "Tecnológico de Monterrey (ITESM-CSN)",
+    period: "2008 – 2013",
+    details: [
+      "Overall GPA: 97.2 / 100",
+      "Graduated with honors for the highest GPA in the class"
+    ]
+  },
+  {
+    title: "Technical Diploma in Computer Science",
+    school: "CETIS 108",
+    period: "2005 – 2008",
+    details: [
+      "Overall GPA: 100 / 100",
+      "Winner of two international project competitions"
+    ]
+  }
+],
+
+    contactInfo: "Contact Information",
+    skillsTitle: "Technical Skills",
+    slidingBarMessage: "Welcome — Full Stack • IoT • Cloud • AI",
+
+    backend: {
+      title: "Backend & Microservices",
+      description: `
+Scalable Node.js/Express architectures, REST APIs, MySQL, WebSockets, WhatsApp Cloud API integrations,
+Python & Go microservices, security and IoT/device communication.`
+    },
+
+    frontend: {
+      title: "Modern Frontend",
+      description: `
+React, Vite, Tailwind, real-time dashboards, reusable components, UI/UX and interactive data-driven systems.`
+    },
+
+    microcontrollers: {
+      title: "IoT, Sensors & Hardware",
+      description: `
+ESP32, Raspberry Pi, MicroPython, Modbus RTU/TCP, RS232, 4-20mA, ADC, industrial sensors,
+SIM800L, LoRa, FTDI, IP cameras and OpenCV vision processing.`
+    },
+
+    apis: {
+      title: "Chatbots, AI & Automation",
+      description: `
+OpenAI (text, vision, realtime), WhatsApp chatbots, template flows, MM Lite, voice processing,
+automated payments, POS and reservation systems.`
+    },
+
+    aws: {
+      title: "Cloud, DevOps & Architecture",
+      description: `
+EC2, S3, CloudFront, Lambda, IoT Core, Route53, ACM, IAM, RDS, DynamoDB, Docker, PM2, CI/CD,
+security and cost optimization.`
+    },
+
+    experienceTitle: "Professional Experience",
+
+    experience: {
+      viewDemo: "View Demo",
+      viewDemo2: "View Demo Control",
+
+      chatbotya: {
+        title: "ChatbotYa — Founder & Lead Developer (2022–Present)",
+        description: `
+Modular platform with AI + WhatsApp + Web for reservations, inventory, ticketing, POS and business automation.
+Node.js/Express backend, React/Vite frontend and AWS multi-tenant infrastructure.`
+      },
+
+      tuconta: {
+        title: "TuContaOnline — Full Stack Engineer / Cloud Architect (2024–Present)",
+        description: `
+Accounting automation through SAT XML parsing, intelligent dashboards and AI-powered WhatsApp reminders.
+Node.js + Python backend, React frontend and AWS deployment.`
+      },
+
+      robocall: {
+        title: "RoboCall — Software + Hardware Developer (2024–Present)",
+        description: `
+AI-powered autodialing platform with speech generation, React dashboard, Node.js backend, Python audio services
+and custom-built GSM hardware.`
+      },
+
+      monitorIoT: {
+        title: "Monitor IoT — Industrial Monitoring Platform (2022–Present)",
+        description: `
+Real-time industrial dashboards with MQTT telemetry, AWS IoT Core, WhatsApp alerts and Raspberry Pi integration.`
+      },
+
+      kotsala: {
+        title: "Kotsala — Smart Greenhouses (2024–Present)",
+        description: `
+Automation platform for greenhouses with NPK sensors, humidity detection, AI vision, IoT control and remote monitoring.`
+      }
+    }
+  }
+};
+
 export default translations;

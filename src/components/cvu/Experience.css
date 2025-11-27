@@ -1,76 +1,131 @@
-/* Estilos de la sección Experience */
-.section {
-  padding: 20px;
-  margin-bottom: 50px; /* Espacio entre secciones */
+/* ==========================================================
+   CV EXPERIENCE — NUEVO DISEÑO
+   Nombres aislados cv-exp-*
+========================================================== */
+
+/* Sección completa */
+.cv-exp-section {
+  padding: 25px;
+  margin-bottom: 40px;
+  background: transparent;
 }
 
-.sectionTitle {
+/* Título */
+.cv-exp-title {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 28px;
+  color: #f5d442; /* Amarillo premium */
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-shadow: 0 0 6px rgba(255,215,0,0.25);
+  text-transform: uppercase;
 }
 
-/* Contenedor de cada item de experiencia */
-.experienceItem {
+/* ==========================================================
+   Tarjeta de experiencia
+========================================================== */
+.cv-exp-item {
   display: flex;
-  align-items: flex-start;
-  margin-bottom: 30px !important; /* Aumenta el espacio entre experiencias con !important */
-  padding: 15px;
-  background-color: #f7f7f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+  padding: 22px;
+  margin-bottom: 30px;
+
+  background: rgba(22, 27, 34, 0.92); /* Oscuro tipo GitHub Dark */
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow: 0 6px 22px rgba(0,0,0,0.28);
+  transition: 0.28s ease;
 }
 
-/* Estilos de la imagen de experiencia */
-.experienceImage {
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
-  border-radius: 10px;
+.cv-exp-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(245,212,66,0.14);
+  border-color: rgba(245,212,66,0.45);
+}
+
+/* ==========================================================
+   Imagen
+========================================================== */
+.cv-exp-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 12px;
   object-fit: cover;
-  transition: transform 0.3s ease;
+
+  border: 2px solid rgba(245,212,66,0.45);
+  transition: 0.28s ease;
 }
 
-.experienceImage:hover {
-  transform: scale(1.05);
+.cv-exp-image:hover {
+  transform: scale(1.10);
+  box-shadow: 0 0 12px rgba(245,212,66,0.4);
 }
 
-/* Título del trabajo */
-.jobTitle {
-  font-size: 1.3em;
-  font-weight: bold;
+/* ==========================================================
+   Contenido
+========================================================== */
+.cv-exp-title-role {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.cv-exp-text {
+  font-size: 0.96rem;
+  color: #d1d1d1;
+  line-height: 1.65;
   margin-bottom: 10px;
 }
 
-/* Texto de descripción */
-.text {
-  font-size: 1rem;
-  color: #333;
-  line-height: 1.6;
-}
+/* ==========================================================
+   Botón DEMO
+========================================================== */
+.cv-exp-demo-btn {
+  margin-top: 12px;
+  padding: 9px 18px;
 
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #111;
 
-.viewDemoButton {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(135deg, #1a73e8, #4285f4);
+  background: #f5d442;
   border: none;
-  border-radius: 25px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  box-shadow: 0 4px 15px rgba(245,212,66,0.3);
+  transition: 0.22s ease;
 }
 
-.viewDemoButton:hover {
+.cv-exp-demo-btn:hover {
+  background: #e6c200;
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 20px rgba(245,212,66,0.38);
 }
 
-.viewDemoButton:active {
+.cv-exp-demo-btn:active {
   transform: translateY(1px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================
+   Móvil
+========================================================== */
+@media (max-width: 768px) {
+  .cv-exp-item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .cv-exp-image {
+    width: 95px;
+    height: 95px;
+  }
 }

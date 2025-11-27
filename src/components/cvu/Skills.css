@@ -1,75 +1,93 @@
-/* Estilos de la sección Skills */
-.section {
-  padding: 20px;
+/* ============================
+   CV SKILLS — NUEVO DISEÑO
+   Nombres aislados cv-skill-*
+============================ */
+
+/* Sección general */
+.cv-skill-section {
+  padding: 25px;
+  margin-bottom: 35px;
+  background: transparent;
 }
 
-.sectionTitle {
+/* Título */
+.cv-skill-title {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #333;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f5d442; /* amarillo elegante */
+  margin-bottom: 25px;
+  letter-spacing: 0.8px;
+  text-shadow: 0 0 6px rgba(255,215,0,0.25);
 }
 
-/* Lista de habilidades */
-.skillList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  list-style-type: none;
+/* GRID: 2 columnas en desktop, 1 en móvil */
+.cv-skill-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.skillList li {
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  padding: 20px;
-  width: calc(33.333% - 40px);
-  max-width: 300px;
-  text-align: left;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media (max-width: 768px) {
+  .cv-skill-list {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Contenedor de iconos */
-.techIconContainer {
+/* Tarjeta individual */
+.cv-skill-card {
+  background: rgba(22, 27, 34, 0.92); /* oscuro premium estilo GitHub dark */
+  border-radius: 14px;
+  padding: 24px;
+
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.28);
+
+  transition: 0.25s ease;
+}
+
+.cv-skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(245,212,66,0.14);
+  border-color: rgba(245,212,66,0.45);
+}
+
+/* Iconos */
+.cv-skill-icons {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 10px;
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
-.techIcon {
-  width: 60px;
-  height: 60px;
+.cv-skill-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  transition: 0.22s ease;
 }
 
-/* Texto de la habilidad */
-.skillText {
-  font-size: 1rem;
-  color: #333;
+.cv-skill-card:hover .cv-skill-icon {
+  transform: scale(1.12);
+  filter: drop-shadow(0 0 6px rgba(255,215,0,0.4));
+}
+
+/* Título del skill */
+.cv-skill-name {
+  font-size: 1.22rem;
+  color: #ffffff;
+  font-weight: 600;
   text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 0.4px;
 }
 
-.skillList strong {
-  display: block;
-  margin-top: 10px;
-  font-size: 1.2rem;
-  color: #333;
-}
-
-/* Adaptación para pantallas pequeñas */
-@media (max-width: 768px) {
-  .skillList {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .skillList li {
-    width: 100%;
-  }
+/* Texto del skill */
+.cv-skill-text {
+  color: #d1d1d1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
 }
